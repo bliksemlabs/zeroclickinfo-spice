@@ -7,7 +7,7 @@
 
         var stop_area_parts = api_result.search[0]._links[0].href.split('/');
         var stop_area_code = stop_area_parts[stop_area_parts.length - 1];
-        $.getScript("/js/spice/openov/departures/" + stop_area_code);
+        $.getScript("/js/spice/openov_departures/" + stop_area_code);
     };
 
     env.ddg_spice_openov_departures = function(api_result){

@@ -15,7 +15,7 @@ spice wrap_jsonp_callback => 1; # only enable for non-JSONP APIs (i.e. no &callb
 # API endpoint - https://duck.co/duckduckhack/spice_attributes#spice-codetocode
 spice to => 'http://ovapi.nl/v2/search?type[]=stop_area&q=$1';
 spice alt_to => {
-    departures => {
+    openov_departures => {
         is_cached => 1,
         proxy_cache_valid => '200 1m',
         to => 'http://ovapi.nl/v2/stop_area/$1/departures',
