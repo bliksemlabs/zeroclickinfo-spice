@@ -1,1 +1,17 @@
-<span>{{name}}</span>
+<div class="openov__time text--primary">{{departureTime}}</div>
+<div class="openov__destination text--primary">{{operator}} {{lineCode}}<br />{{destination}}</div>
+<div class="openov__details">
+    {{#if cancelled}}Cancelled{{else}}{{#if passed}}Departed{{else}}Arrives {{arrivalTime}}{{/if}}{{/if}}<br/>
+</div>
+<div class="openov__status-sep">
+    <div class="openov__sep-line"></div>
+    <div class="openov__badge {{status_class}}"></div>
+    <div class="openov__sep-line"></div>
+</div>
+<div class="openov__status">
+    {{#if platformCode}}
+        <div class="one-line">Platform {{platformCode}}</div>
+    {{else}}
+        <div class="one-line tx-clr--lt2"></div>
+    {{/if}}
+</div>
